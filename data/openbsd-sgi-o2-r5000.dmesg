@@ -1,0 +1,33 @@
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+        The Regents of the University of California.  All rights reserved.
+Copyright (c) 1995-2004 OpenBSD. All rights reserved.  http://www.OpenBSD.org
+
+OpenBSD 3.6-beta (RAMDISK) #2: Sat Aug 14 13:25:43 CEST 2004
+    root@moosehead.opsycon.se:/sys/arch/sgi/compile/RAMDISK
+real mem = 67108864
+rsvd mem = 7020544
+avail mem = 46977024
+using 819 buffers containing 3354624 bytes of memory
+mainbus0 (root)
+cpu0 at mainbus0: MIPS R5000 CPU rev 2.1 200 MHz with R5000 based FPC rev 1.0
+cpu0: cache L1-I 32KB D 32KB 2 way, L2 1024KB direct
+macebus0 at mainbus0: crime rev 10.1
+clock0 at macebus0: TOD with DS1687, ticker on int5 using count register.
+macepcibr0 at macebus0: mace rev 1, host system O2
+pci0 at macepcibr0 bus 0
+ahc0 at pci0 dev 1 function 0 "Adaptec AIC-7880" rev 0x00: irq 9
+ahc0: Using left over BIOS settings
+scsibus0 at ahc0: 16 targets
+sd0 at scsibus0 targ 1 lun 0: <SGI, QUANTUM VIKING, 880Q> SCSI2 0/direct fixed
+sd0: 4340MB, 6144 cyl, 8 head, 180 sec, 512 bytes/sec, 8888543 sec total
+cd0 at scsibus0 targ 4 lun 0: <TOSHIBA, CD-ROM XM-6201TA, 1037> SCSI2 5/cdrom removable
+ahc1 at pci0 dev 2 function 0 "Adaptec AIC-7880" rev 0x00: irq 10
+ahc1: Using left over BIOS settings
+scsibus1 at ahc1: 16 targets
+com0 at macebus0: ns16550a, 16 byte fifo
+com0: console
+com1 at macebus0: ns16550a, 16 byte fifo
+mec0 at macebus0: MAC-110 rev 1, address 08:00:69:0c:60:ec
+nsphy0 at mec0 phy 8: DP83840 10/100 media interface, rev. 1
+rd0: fixed, 8192 blocks
+rootdev=0x800 rrootdev=0x1600 rawdev=0x1602
