@@ -1,0 +1,86 @@
+[ using 346712 bytes of bsd ELF symbol table ]
+console out [ATY,Crown_A]console in [keyboard] ADB found
+using parent ATY,CrownParent:: memaddr b8000000 size 8000000, : consaddr bc008000, : ioaddr b0020000, size 20000: memtag 8000, iotag 8000: width 1280 linebytes 1280 height 854 depth 8
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+        The Regents of the University of California.  All rights reserved.
+Copyright (c) 1995-2004 OpenBSD. All rights reserved.  http://www.OpenBSD.org
+
+OpenBSD 3.5 (GENERIC) #5: Sat Mar 20 19:16:16 CET 2004
+    xsa@kinky.santolaria.net:/usr/src/sys/arch/macppc/compile/GENERIC
+real mem = 536870912 (524288K)
+avail mem = 484433920 (473080K)
+using 1254 buffers containing 26841088 bytes of memory
+mainbus0 (root)
+cpu0 at mainbus0: 7455 (Revision 201): 667 MHz: 256KB L2 cache, 1MB L3 cache
+memc0 at mainbus0: uni-n
+mpcpcibr0 at mainbus0: uni-north, Revision 0xff
+pci0 at mpcpcibr0 bus 0
+pchb0 at pci0 dev 11 function 0 "Apple Uni-N2 AGP" rev 0x00
+vgafb0 at pci0 dev 16 function 0 "ATI Radeon Mobility M7 LW" rev 0x00, mmio
+wsdisplay0 at vgafb0: console (std, vt100 emulation)
+mpcpcibr1 at mainbus0: uni-north, Revision 0x0
+pci1 at mpcpcibr1 bus 0
+pchb1 at pci1 dev 11 function 0 "Apple Uni-N2 Host" rev 0x00
+macobio0 at pci1 dev 23 function 0 "Apple Keylargo" rev 0x03
+openpic0 at macobio0: version 0x4614
+gpio_obio0 at macobio0
+gpio_obio1 at gpio_obio0 offset 0x59 irq 47
+programmer-switch at gpio_obio0 offset 0x61 not configured
+firewire-linkon at gpio_obio0 offset 0x5f not configured
+gpio5 at gpio_obio0 offset 0x6f not configured
+gpio6 at gpio_obio0 offset 0x70 not configured
+extint-gpio4 at gpio_obio0 offset 0x5c not configured
+gpio11 at gpio_obio0 offset 0x75 not configured
+extint-gpio15 at gpio_obio0 offset 0x67 not configured
+zsc0 at macobio0: irq 22,23
+zstty0 at zsc0 channel 0
+zstty1 at zsc0 channel 1
+snapper0 at macobio0: irq 30,1,2
+adb0 at macobio0 irq 25: via-pmu 3 targets
+aed0 at adb0 addr 0: ADB Event device
+akbd0 at adb0 addr 2: iBook keyboard with inverted T (ISO layout)
+wskbd0 at akbd0 (mux 1 ignored for console): console keyboard, using wsdisplay0
+ams0 at adb0 addr 3: EMP trackpad <tpad> 2-button, 400 dpi
+wsmouse0 at ams0 mux 0
+abtn0 at adb0 addr 7: brightness/volume/eject buttons
+apm0 at adb0: battery flags 0x5, 99% charged
+ki2c0 at macobio0
+wdc0 at macobio0 irq 19: DMA
+wd0 at wdc0 channel 0 drive 0: <TOSHIBA MK4018GAS>
+wd0: 16-sector PIO, LBA, 38154MB, 78140160 sectors
+wd0(wdc0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 4
+wdc1 at macobio0 irq 20: DMA
+atapiscsi0 at wdc1 channel 0 drive 0
+scsibus0 at atapiscsi0: 2 targets
+cd0 at scsibus0 targ 0 lun 0: <MATSHITA, CD-RW CW-8121, AA20> SCSI0 5/cdrom removable
+cd0(wdc1:0:0): using BIOS timings, DMA mode 2
+wdc2 at macobio0 irq 21: DMA
+wi0 at macobio0 irq 57:
+wi0: Firmware 8.70 variant 1, address 00:30:65:06:da:63
+audio0 at snapper0
+ohci0 at pci1 dev 24 function 0 "Apple USB" rev 0x00: irq 27, version 1.0
+usb0 at ohci0: USB revision 1.0
+uhub0 at usb0
+uhub0: Apple OHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+ohci1 at pci1 dev 25 function 0 "Apple USB" rev 0x00: irq 28, version 1.0
+usb1 at ohci1: USB revision 1.0
+uhub1 at usb1
+uhub1: Apple OHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub1: 2 ports with 2 removable, self powered
+cbb0 at pci1 dev 26 function 0 "Texas Instruments PCI1410 CardBus" rev 0x02: irq 58
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 1 device 0 cacheline 0x8, lattimer 0x20
+pcmcia0 at cardslot0
+mpcpcibr2 at mainbus0: uni-north, Revision 0xff
+pci2 at mpcpcibr2 bus 0
+pchb2 at pci2 dev 11 function 0 "Apple Uni-N2 Host" rev 0x00
+"AT&T/Lucent FW322 1394" rev 0x00 at pci2 dev 14 function 0 not configured
+gem0 at pci2 dev 15 function 0 "Apple GMAC" rev 0x01
+gem0: address 00:03:93:a6:ea:2a
+brgphy0 at gem0 phy 0: BCM5421S 10/100/1000baseTX PHY, rev. 1
+gem0: using irq 41 for interrupt
+bootpath: '/pci@f2000000/mac-io@17/ata-4@1f000/disk@0/bsd'
+boot device: wd0.
+root on wd0a
+rootdev=0x0 rrootdev=0xb00 rawdev=0xb02
