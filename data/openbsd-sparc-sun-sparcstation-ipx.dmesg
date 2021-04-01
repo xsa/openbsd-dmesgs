@@ -1,0 +1,38 @@
+OpenBSD 3.3 (GENERIC) #14: Sat Mar 29 15:13:34 MST 2003
+    deraadt@sparc.openbsd.org:/usr/src/sys/arch/sparc/compile/GENERIC
+real mem = 67010560
+avail mem = 59125760
+using 200 buffers containing 3350528 bytes of memory
+bootpath: /sbus0/esp@0,800000/sd@0,0
+mainbus0 (root): SUNW,Sun 4/50
+cpu0 at mainbus0: W8601/8701 or MB86903 @ 40 MHz, on-chip FPU; cache chip bug - trap page uncached
+cpu0: 64K byte write-through, 32 bytes/line, hw flush cache enabled
+memreg0 at mainbus0 ioaddr 0xf4000000
+clock0 at mainbus0 ioaddr 0xf2000000: mk48t02 (eeprom)
+timer0 at mainbus0 ioaddr 0xf3000000 delay constant 17
+auxreg0 at mainbus0 ioaddr 0xf7400003
+zs0 at mainbus0 ioaddr 0xf1000000 pri 12, softpri 6
+zstty0 at zs0 channel 0
+zstty1 at zs0 channel 1
+zs1 at mainbus0 ioaddr 0xf0000000 pri 12, softpri 6
+zskbd0 at zs1 channel 0: keyboard, type 5, layout 0x21
+wskbd0 at zskbd0: console keyboard
+zstty2 at zs1 channel 1: mouse
+audioamd0 at mainbus0 ioaddr 0xf7201000 pri 13, softpri 4
+audio0 at audioamd0
+sbus0 at mainbus0 ioaddr 0xf8000000: clock = 20 MHz
+dma0 at sbus0 slot 0 offset 0x400000: rev 1+
+esp0 at sbus0 slot 0 offset 0x800000 pri 3: ESP100A, 20MHz, SCSI ID 7
+scsibus0 at esp0: 8 targets
+sd0 at scsibus0 targ 0 lun 0: SEAGATE, ST32151N, 0560 SCSI2 0/direct fixed
+sd0: 2047MB, 4177 cyl, 8 head, 125 sec, 512 bytes/sec, 4193415 sec total
+cd0 at scsibus0 targ 6 lun 0: MATSHITA, CD-ROM CR-8004, 1.0p SCSI2 5/cdrom removable
+le0 at sbus0 slot 0 offset 0xc00000 pri 5: address 08:00:20:9b:13:13
+le0: 16 receive buffers, 4 transmit buffers
+HeliosCOM+ at sbus0 slot 2 offset 0x10000 not configured
+cgsix0 at sbus0 slot 3 offset 0x0: SUNW,501-1672, 1152x900, rev 8
+wsdisplay0 at cgsix0: console (std, sun emulation), using wskbd0
+fdc0 at mainbus0 ioaddr 0xf7200000 pri 11, softpri 4: chip 82072
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec
+root on sd0a
+rootdev=0x700 rrootdev=0x1100 rawdev=0x1102
