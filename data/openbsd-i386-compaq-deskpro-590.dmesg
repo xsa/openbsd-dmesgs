@@ -1,0 +1,53 @@
+OpenBSD 3.4 (GENERIC) #18: Wed Sep 17 03:34:47 MDT 2003
+    deraadt@i386.openbsd.org:/usr/src/sys/arch/i386/compile/GENERIC
+cpu0: F00F bug workaround installed
+cpu0: Intel Pentium (P54C) ("GenuineIntel" 586-class) 90 MHz
+cpu0: FPU,V86,DE,PSE,TSC,MSR,MCE,CX8
+real mem  = 16363520 (15980K)
+avail mem = 9342976 (9124K)
+using 225 buffers containing 921600 bytes (900K) of memory
+mainbus0 (root)
+bios0 at mainbus0: AT/286+(b9) BIOS, date 05/12/95
+apm0 at bios0apm0: APM power management enable: power management disabled (1)
+: Power Management spec V1.1 (BIOS mgmt disabled)
+apm0: AC on, battery charge unknown
+pcibios at bios0 function 0x1a not configured
+bios0: ROM list: 0xc0000/0x8000
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+"Compaq Triflex Host-PCI" rev 0x01 at pci0 dev 0 function 0 not configured
+vga1 at pci0 dev 10 function 0 "Compaq QVision 1280/p" rev 0x12
+wsdisplay0 at vga1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+le1 at pci0 dev 11 function 0 "AMD 79c970 PCnet-PCI LANCE" rev 0x02: irq 11
+le1: address 00:80:5f:ac:fb:15
+le1: 8 receive buffers, 2 transmit buffers
+de0 at pci0 dev 14 function 0 "DEC 21040" rev 0x23: irq 11
+de0: SMC 8432BT 21040 [10Mb/s] pass 2.3 address 00:00:c0:33:db:0d
+pcib0 at pci0 dev 15 function 0 "Compaq PCI-ISA" rev 0x43
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5
+pckbd0 at pckbc0 (kbd slot)
+pckbc0: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+wdc0 at isa0 port 0x1f0/8 irq 14
+wd0 at wdc0 channel 0 drive 0: <WDC AC2700F>
+wd0: 16-sector PIO, LBA, 696MB, 1416 cyl, 16 head, 63 sec, 1427328 sectors
+atapiscsi0 at wdc0 channel 0 drive 1
+scsibus0 at atapiscsi0: 2 targets
+cd0 at scsibus0 targ 0 lun 0: <SONY, CD-ROM CDU77E-Q, 1.1a> SCSI0 5/cdrom removable
+wd0(wdc0:0:0): using BIOS timings
+cd0(wdc0:0:1): using BIOS timings
+pcppi0 at isa0 port 0x61
+midi0 at pcppi0: <PC speaker>
+sysbeep0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: using exception 16
+pccom0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec
+biomask 4040 netmask 4840 ttymask 48c2
+pctr: 586-class performance counters and user-level cycle counter enabled
+dkcsum: wd0 matched BIOS disk 80
+root on wd0a
+rootdev=0x0 rrootdev=0x300 rawdev=0x302
