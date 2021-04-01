@@ -1,0 +1,80 @@
+OpenBSD 3.5 (GENERIC) #1: Tue Mar 23 18:39:25 CET 2004
+    xsa@moo.santolaria.net:/usr/src/sys/arch/i386/compile/GENERIC
+cpu0: Intel Pentium III ("GenuineIntel" 686-class) 696 MHz
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE
+real mem  = 133738496 (130604K)
+avail mem = 117837824 (115076K)
+using 1658 buffers containing 6791168 bytes (6632K) of memory
+mainbus0 (root)
+bios0 at mainbus0: AT/286+(ff) BIOS, date 11/30/99, BIOS32 rev. 0 @ 0xf0000
+apm0 at bios0: Power Management spec V1.2 (BIOS managing devices)
+apm0: battery life expectancy 100%
+apm0: AC on, battery charge high
+pcibios0 at bios0: rev. 2.1 @ 0xf0000/0x1200
+pcibios0: PCI IRQ Routing Table rev. 1.0 @ 0xf4a10/224 (12 entries)
+pcibios0: PCI Exclusive IRQs: 11
+pcibios0: PCI Interrupt Router at 000:07:0 ("Intel 82371AB PIIX4 ISA" rev 0x00)
+pcibios0: PCI bus #3 is the last bus
+bios0: ROM list: 0xc0000/0x10000 0xd0000/0x1800
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82443BX AGP" rev 0x03
+ppb0 at pci0 dev 1 function 0 "Intel 82443BX AGP" rev 0x03
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 "ATI Mobility 1" rev 0x64
+wsdisplay0 at vga1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+cbb0 at pci0 dev 4 function 0 "Texas Instruments PCI1225 CardBus" rev 0x01: irq 11
+cbb1 at pci0 dev 4 function 1 "Texas Instruments PCI1225 CardBus" rev 0x01: irq 11
+pcib0 at pci0 dev 7 function 0 "Intel 82371AB PIIX4 ISA" rev 0x02
+pciide0 at pci0 dev 7 function 1 "Intel 82371AB IDE" rev 0x01: DMA, channel 0 wired to compatibility, channel 1 wired to compatibility
+wd0 at pciide0 channel 0 drive 0: <TOSHIBA MK1214GAP>
+wd0: 16-sector PIO, LBA, 11513MB, 23579136 sectors
+atapiscsi0 at pciide0 channel 0 drive 1
+scsibus0 at atapiscsi0: 2 targets
+cd0 at scsibus0 targ 0 lun 0: <COMPAQ, CD-224E, 9.0B> SCSI0 5/cdrom removable
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 2
+cd0(pciide0:0:1): using PIO mode 4, DMA mode 2
+pciide0: channel 1 ignored (disabled)
+uhci0 at pci0 dev 7 function 2 "Intel 82371AB USB" rev 0x01: irq 11
+usb0 at uhci0: USB revision 1.0
+uhub0 at usb0
+uhub0: Intel UHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+"Intel 82371AB Power Mgmt" rev 0x03 at pci0 dev 7 function 3 not configured
+maestro0 at pci0 dev 8 function 0 "ESS Maestro 2E" rev 0x10: irq 11
+ac97: codec id 0x83847609 (SigmaTel STAC9721/23)
+ac97: codec features 18 bit DAC, 18 bit ADC, SigmaTel 3D
+audio0 at maestro0
+fxp0 at pci0 dev 9 function 0 "Intel 82557" rev 0x09: irq 11, address 00:d0:59:2b:ef:bf
+inphy0 at fxp0 phy 1: i82555 10/100 media interface, rev. 4
+"AT&T/Lucent LTMODEM" rev 0x00 at pci0 dev 9 function 1 not configured
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 2 device 0 cacheline 0x8, lattimer 0x20
+pcmcia0 at cardslot0
+cardslot1 at cbb1 slot 1 flags 0
+cardbus1 at cardslot1: bus 3 device 0 cacheline 0x8, lattimer 0x20
+pcmcia1 at cardslot1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5
+pckbd0 at pckbc0 (kbd slot)
+pckbc0: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+pckbc0: using irq 12 for aux slot
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+midi0 at pcppi0: <PC speaker>
+sysbeep0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: using exception 16
+pccom0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pccom2 at isa0 port 0x3e8/8 irq 5: ns16550a, 16 byte fifo
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec
+biomask 4840 netmask 4840 ttymask 58c2
+pctr: 686-class user-level performance counters enabled
+mtrr: Pentium Pro MTRR support
+dkcsum: wd0 matched BIOS disk 80
+root on wd0a
+rootdev=0x0 rrootdev=0x300 rawdev=0x302
