@@ -1,0 +1,41 @@
+[ using 249548 bytes of bsd ELF symbol table ]
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+        The Regents of the University of California.  All rights reserved.
+Copyright (c) 1995-2004 OpenBSD. All rights reserved.  http://www.OpenBSD.org
+
+OpenBSD 3.5 (GENERIC) #66: Fri Mar 19 22:39:48 MST 2004
+    deraadt@hppa.openbsd.org:/usr/src/sys/arch/hppa/compile/GENERIC
+HP 9000/715/50 (Scorpio) PA-RISC 1.1a
+real mem = 67108864 (524288 reserved for PROM, 4890624 used by OpenBSD)
+avail mem = 53370880
+using 1630 buffers containing 6676480 bytes of memory
+mainbus0 (root) [flex fff80000]
+pdc0 at mainbus0
+power0 at mainbus0: not available
+mem0 at mainbus0 offset ffbf000: viper rev 0, size 64MB
+cpu0 at mainbus0 offset ffbe000 irq 31: PCXT L1-A 50MHz, FPU PCXT (Rolex - CMOS-26B) rev 1
+cpu0: 64K(32b/l) Icache, 64K(32b/l) wr-back coherent Dcache, 120 coherent TLB, 16 BTLB
+asp0 at mainbus0 offset 82f000 irq 28: Scorpio rev 1, lan 1 scsi 7
+gsc0 at asp0: leds
+harmony0 at gsc0 offset 0 irq 13: rev 0
+audio0 at harmony0
+lpt0 at gsc0 offset 24000 irq 7
+com1 at gsc0 offset 22000 irq 6: ns16550a, 16 byte fifo
+com0 at gsc0 offset 23000 irq 5: ns16550a, 16 byte fifo
+hil0 at gsc0 offset 21000 irq 1
+ie0 at gsc0 offset 26000 irq 8: i82596DX v0.0, address 08:00:09:49:5b:36
+oosiop0 at gsc0 offset 25000 irq 9: NCR53C700 rev 0, 50MHz, SCSI ID 7
+scsibus0 at oosiop0: 8 targets
+oosiop0: target 6 now using 8 bit  synchronous xfers
+sd0 at scsibus0 targ 6 lun 0: <HP, C2247, 0BQ3< SCSI2 0/direct fixed
+sd0: 1001MB, 2051 cyl, 13 head, 76 sec, 512 bytes/sec, 2051460 sec total
+sti0 at mainbus0 offset 4000000 irq 11: HPA1991AC19 rev 8.02;10, ID 0x9299000000000000
+sti0: 2048x1024 frame buffer, 1280x1024x8 display, offset 0x0
+sti0: 10x20 font type 1, 40 bpc, charset 0-255
+biomask 0x7 netmask 0xf ttymask 0x3f
+boot path: 2/0/1.6 class=1 flags=c0<autoboot,autosearch> hpa=0xf0825000 spa=0x0 io=0x9f4c
+root on sd0a swap on sd0b
+hilkbd0 at hil0 code 1: 109-key keyboard, layout 1f
+wskbd0 at hilkbd0 (mux 1 ignored for console): console keyboard
+wsdisplay0 at sti0: console (default, vt100 emulation), using wskbd0
+rootdev=0x400 rrootdev=0xa00 rawdev=0xa02
