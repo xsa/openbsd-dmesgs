@@ -1,6 +1,9 @@
 # My OpenBSD *dmesg's*
 Collection of dmesg's of my OpenBSD devices (*may* be outdated):
 
+## OpenBSD/amd64
+- [Lenovo ThinkPad T460s](data/openbsd-amd64-lenovo-thinkpad-t460s.dmesg)
+
 ## OpenBSD/i386
 - [Compaq Armada E500](data/openbsd-i386-compaq-armada-e500.dmesg)
 - [Compaq Deskpro 590](data/openbsd-i386-compaq-deskpro-590.dmesg)
